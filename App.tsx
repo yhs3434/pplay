@@ -7,6 +7,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {AppNavigation} from './src/navigations';
 import {RecoilRoot} from 'recoil';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import {initializeI18next} from './src/plugins/i18next';
+
+initializeI18next();
 
 export default function App(): JSX.Element {
   return (
