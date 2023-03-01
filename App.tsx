@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppNavigation} from './src/navigations';
 import {RecoilRoot} from 'recoil';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 
 export default function App(): JSX.Element {
   return (
@@ -24,10 +25,14 @@ const Container = styled(SafeAreaView)`
 
 type WrapperProps = PropsWithChildren<{}>;
 
+const queryClient = new QueryClient();
+
 const Wrapper = ({children}: WrapperProps) => {
   return (
     <NavigationContainer>
-      <RecoilRoot>{children}</RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <RecoilRoot>{children}</RecoilRoot>
+      </QueryClientProvider>
     </NavigationContainer>
   );
 };
