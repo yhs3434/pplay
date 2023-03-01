@@ -1,10 +1,11 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
+import type {StatusBarStyle} from 'react-native';
 import styled from 'styled-components';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppNavigation} from './src/navigations';
-import type {StatusBarStyle} from 'react-native';
+import {RecoilRoot} from 'recoil';
 
 export default function App(): JSX.Element {
   return (
@@ -24,7 +25,11 @@ const Container = styled(SafeAreaView)`
 type WrapperProps = PropsWithChildren<{}>;
 
 const Wrapper = ({children}: WrapperProps) => {
-  return <NavigationContainer>{children}</NavigationContainer>;
+  return (
+    <NavigationContainer>
+      <RecoilRoot>{children}</RecoilRoot>
+    </NavigationContainer>
+  );
 };
 
 type CustomStatusBarProps = {
