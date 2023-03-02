@@ -51,6 +51,7 @@ function getResources(lngs) {
 
 export function initializeI18next(lng = 'ko-KR') {
   i18next.init({
+    compatibilityJSON: 'v3',
     lng,
     fallbackLng: false,
     returnEmptyString: false,
