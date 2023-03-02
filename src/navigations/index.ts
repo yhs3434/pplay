@@ -1,1 +1,1 @@
-export {default as AppNavigation} from './app';
+export {default as AppNavigation} from './root';
