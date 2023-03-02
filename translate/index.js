@@ -1,14 +1,14 @@
 const {GoogleSpreadsheet} = require('google-spreadsheet');
-const creds = require('./.credentials/your-app-credentials-some-unique-id.json');
+const creds = require('./.credentials/pple-379413-c46c76d83fb8.json');
 const i18nextConfig = require('../i18next-scanner.config');
 
-const spreadsheetDocId = 'your-spreadSheetDocId';
+const spreadsheetDocId = '1lvIQnIvQt6YqjqPl3x_j2JfQGijr7lAGP8GK_rJBjIU';
 const ns = 'translation';
 const lngs = i18nextConfig.options.lngs;
 const loadPath = i18nextConfig.options.resource.loadPath;
 const localesPath = loadPath.replace('/{{lng}}/{{ns}}.json', '');
 const rePluralPostfix = new RegExp(/_plural|_[\d]/g);
-const sheetId = 1234; // your sheet id
+const sheetId = 0; // your sheet id
 const NOT_AVAILABLE_CELL = '_N/A';
 const columnKeyToHeader = {
   key: '키',

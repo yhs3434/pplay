@@ -16,8 +16,8 @@ module.exports = {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.html'],
     },
     resource: {
-      loadPath: path.join(__dirname, 'assets/locales/{{lng}}/{{ns}}.json'),
-      savePath: path.join(__dirname, 'assets/locales/{{lng}}/{{ns}}.json'),
+      loadPath: path.join(__dirname, 'src/assets/locales/{{lng}}/{{ns}}.json'),
+      savePath: path.join(__dirname, 'src/assets/locales/{{lng}}/{{ns}}.json'),
     },
     defaultValue(lng, ns, key) {
       const keyAsDefaultValue = ['ko-KR'];

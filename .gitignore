@@ -63,4 +63,5 @@ yarn-error.log
 .metro-health-check*
 
 # locale json files
-/assets/locales/
+**/assets/locales/
+/translate/.credentials
