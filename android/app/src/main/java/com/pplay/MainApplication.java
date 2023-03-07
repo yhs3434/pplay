@@ -1,4 +1,4 @@
-package com.traverse;
+package com.pplay;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
