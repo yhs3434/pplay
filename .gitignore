@@ -65,3 +65,6 @@ yarn-error.log
 # locale json files
 **/assets/locales/
 /translate/.credentials
+
+# google api
+/android/app/google-services.json
